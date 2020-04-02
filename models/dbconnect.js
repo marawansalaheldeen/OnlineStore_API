@@ -1,10 +1,10 @@
 var mysql =require('mysql')
 
-const con = mysql.createConnection({
+const connection = mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'root',
     database:'stora'
 })
 
-module.exports = con
+module.exports = connection
