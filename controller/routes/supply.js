@@ -1,13 +1,6 @@
 const express = require('express')
 const router = new express.Router()
-var mysql =require('mysql')
-
-const con = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'root',
-    database:'stora'
-})
+const conn = require('../../models/dbconnect');
 
 router.get('/store/supply',async(req,res)=>{
     await con.query("SELECT * FROM supplier",(err,result)=>{
